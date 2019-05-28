@@ -1,3 +1,9 @@
+## Current status: DRAFT, work in progress
+
+Please consider this work as non-final for the time being.
+
+## This repository
+
 This repository contains an XML Schema for entities defined in the EBU-TT Live (Part 3) specification,
 [Tech3370](https://tech.ebu.ch/publications/tech3370).
 
@@ -12,6 +18,6 @@ Please note that the EBU-TT XML Schema is a helping document and NOT normative b
 
 ## Cloning
 
-This schema depends on the w3c/ebu-tt-m-xsd repository and imports it via a git submodule.
+This schema depends on the ebu/ebu-tt-m-xsd repository and imports it via a git submodule.
 If cloning from the command line make sure to include the `--recurse-submodules` option,
 or after cloning run `git submodule init`.
