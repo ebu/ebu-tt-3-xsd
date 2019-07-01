@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    targetNamespace="http://www.w3.org/ns/ttml"
+    xmlns:tt="http://www.w3.org/ns/ttml"
+    xmlns:ebuttp="urn:ebu:tt:parameters"
+    elementFormDefault="qualified" vc:minVersion="1.1">
+    <xs:include schemaLocation="ebu-tt-xsd/ebutt.xsd"/>
+    <xs:import namespace="urn:ebu:tt:parameters" schemaLocation="ebutt_parameters.xsd"/>
+    
+    <xs:complexType name="tt3_type">
+        <xs:annotation>
+            <xs:documentation>Root element of an EBU-TT-3 XML document.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="tt:tt_type">
+                <xs:attribute ref="ebuttp:authorsGroupControlToken"/>
+                <xs:attribute ref="ebuttp:authorsGroupIdentifier"/>
+                <xs:attribute ref="ebuttp:referenceClockIdentifier"/>
+                <xs:attribute ref="ebuttp:sequenceIdentifier" use="required"/>
+                <xs:attribute ref="ebuttp:sequenceNumber" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="tt" type="tt:tt3_type"></xs:element>    
+</xs:schema>
