@@ -18,6 +18,7 @@ Please note that the EBU-TT XML Schema is a helping document and NOT normative b
 
 ## Cloning
 
-This schema depends on the ebu/ebu-tt-m-xsd repository and imports it via a git submodule.
+This schema depends on the ebu/ebu-tt-xsd which in turn depends on the ebu/ebu-tt-m-xsd repository;
+those dependencies are imported via a git submodule.
 If cloning from the command line make sure to include the `--recurse-submodules` option,
-or after cloning run `git submodule init`.
+or after cloning run `git submodule init` and `git submodule update`.
